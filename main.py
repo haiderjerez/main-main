@@ -22,7 +22,6 @@ import pedirSubMusuario_opcion
 #constants
 RUTA_BASE_DE_DATOS = "usuario.json"
 
-datos = datos.cargar_datos(RUTA_BASE_DE_DATOS)
 
 while True:
     try:
@@ -38,7 +37,7 @@ while True:
                     if opc == 1:
                         print(usuarios.mostrarLIST_usuario())
                     elif opc == 2:
-                        usuarios.crearUsuario()
+                        usuarios.crearUsuario_admin()
                     elif opc == 3:
                         usuarios.eliminarUsuario()
                     elif opc == 4:

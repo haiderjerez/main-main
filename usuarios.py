@@ -102,8 +102,8 @@ def editarUsuarios():
                 break
             else:
                 print("EL DOCUMENTO NO EXISTE")
-with open("usuario.json", "w") as json_file:
-        json.dump(data, json_file, indent=4) # type: ignore  # noqa: F821
+    with open("usuario.json", "w") as json_file:
+            json.dump(data, json_file, indent=4) # type: ignore  # noqa: F821
  
 #editar la categoria
 def editarCategoria():
