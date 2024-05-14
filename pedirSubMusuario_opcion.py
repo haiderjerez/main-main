@@ -1,4 +1,5 @@
-def pedirSubSubM_opcion():
+#opcion de los usuarios
+def pedirSubMusuario_opcion():
     opc = 0
     try:
         opc = int(input("INGRESE LA OPCCION DESEADA: "))

@@ -52,16 +52,21 @@ def menuVent_admin():
 [4]-ELIMINAR PRODUCTOS
 [5]-VOLVER 
 """)       
+    
+def menuReport_admin():
+    print("""
+-------------------------------
+[1]-VER REPORTES
+[2]-ELIMINAR REPORTES
+[3]-VOLVER
+""")
 
 def menuCatego_admin():
     print("""
 -------------------------------------------------------
-[1]-VER INTEGRANTES DE CATEGORIA 'NUEVOS CLIENTES'
-[2]-VER INTEGRANTES DE CATEGORIA 'CLIENTES REGULARES'
-[3]-VER INTEGRANTES DE CATEGORIA 'CLIENTES LEALES'
-[4]-AÑADIR CLIENTES A CATEGORIA
-[5]-ELIMINAR CLIENTES DE CATEGORIA  
-[6]-VOLVER         
+[1]-VER CLIENTES DE CATEGORIA
+[4]-EDITAR CLIENTES DE CATEGORIA  
+[5]-VOLVER         
 -------------------------------------------------------  
 """)               
 def menu_usuario():
@@ -73,9 +78,8 @@ def menu_usuario():
 [4]-VER PLANES 
 [5]-VER PRODUCTOS
 [6]-REPORTAR
-[7]-PROMOS PERSONAL
-[8]-CATEGORIA   
-[9]-SALIR
+[7]-PROMOS PERSONAL 
+[8]-SALIR
 ------------------------------                            
 """)     
 
@@ -91,6 +95,7 @@ OPCION NO VALIDA
 """)
         return -1
     
+#opcion para mostrar sub menu 
 def pedirSubM_opcion():
     opc = 0
     try:
@@ -103,3 +108,6 @@ OPCION NO VALIDA
 """)
         return -1
     
+
+
+

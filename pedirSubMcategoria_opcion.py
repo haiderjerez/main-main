@@ -1,4 +1,5 @@
-def pedirSubSubM_opcion():
+#opcion categoria
+def pedirSubMcategoria_opcion():
     opc = 0
     try:
         opc = int(input("INGRESE LA OPCCION DESEADA: "))
@@ -8,4 +9,4 @@ def pedirSubSubM_opcion():
         print("""
 OPCION NO VALIDA
 """)
-        return -1
+        return -1()

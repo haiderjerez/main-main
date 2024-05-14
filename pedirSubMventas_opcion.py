@@ -1,4 +1,5 @@
-def pedirSubSubM_opcion():
+#opcion para ventas
+def pedirSubMventas_opcion():
     opc = 0
     try:
         opc = int(input("INGRESE LA OPCCION DESEADA: "))

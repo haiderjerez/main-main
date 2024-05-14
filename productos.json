@@ -1,0 +1,10 @@
+[
+    {
+        "nombre": "honor",
+        "precio": "$1800",
+        "cantidad": "1",
+        "descripcion": "es un ceular ",
+        "codigo": "123",
+        "categoria": "celular "
+    }
+]
