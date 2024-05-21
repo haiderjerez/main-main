@@ -3,7 +3,8 @@
 import agruparPorCategoria
 import menu
 import datos
-import os
+import os, time, traceback
+from datetime import datetime
 import usuarios
 import pedirSubSubM_opcion
 import planes
@@ -16,6 +17,9 @@ import reportes
 import pedirSubMcategoria_opcion
 import agruparPorCategoria
 import pedirSubMusuario_opcion
+from excepciones import *
+import ventas 
+
 
 
 
@@ -28,14 +32,16 @@ while True:
         menu.menu_1()
         while True:
             opc = menu.pedir_opcion()
+            os.system("clear")
             if opc == 1:
                 menu.menu_admin()
                 opc=menu.pedirSubM_opcion()
                 if opc ==1:
+                    os.system("clear")
                     menu.menuUsua_admin()
                     opc=pedirSubSubM_opcion.pedirSubSubM_opcion()
                     if opc == 1:
-                        print(usuarios.mostrarLIST_usuario())
+                        usuarios.mostrarLIST_usuario()
                     elif opc == 2:
                         usuarios.crearUsuario_admin()
                     elif opc == 3:
@@ -43,10 +49,11 @@ while True:
                     elif opc == 4:
                         menu.menu_admin()
                 elif opc == 2:
+                    os.system("clear")
                     menu.menuPlans_admin()
                     opc=pedirSubMplan_opcion.pedirSubMplan_opcion()
                     if opc == 1:
-                        print(planes.mostrarLIST_planes())
+                        planes.mostrarLIST_planes()
                     elif opc == 2: 
                         planes.crearPlanes()
                     elif opc == 3:
@@ -58,28 +65,35 @@ while True:
                     elif opc == 6:
                         menu.menu_admin()
                 elif opc == 3:
+                    os.system("clear")
                     menu.menuVent_admin()
                     opc=pedirSubMventas_opcion.pedirSubMventas_opcion()
                     if opc == 1:
-                        print("ver ventas")
+                        ventas.mostrarVentas()
                     elif opc == 2:
-                        print(productos.mostrarLIST_productos())
-                    elif opc ==3:
+                        ventas.crearVentas()                   
+                    elif opc == 3:
+                        productos.mostrarLIST_productos()
+                    elif opc ==4:
                         productos.crearProductos()
-                    elif opc == 4:
-                        productos.eliminarProductos()
                     elif opc == 5:
+                        productos.eliminarProductos()
+                    elif opc == 6:
                         menu.menu_admin()
                 elif opc == 4:
+                    os.system("clear")
                     menu.menuReport_admin()
                     opc=pedirSubMreport_opcion.pedirSubMreport_opcion()
                     if opc == 1:
-                        print (menu.menuReport_admin)
+                        reportes.mostrarLIST_reportes()
                     elif opc == 2:
-                        reportes.eliminarReporte()
+                        reportes.crearReporte()
                     elif opc == 3:
+                        reportes.eliminarReporte()
+                    elif opc == 4:
                         menu.menu_admin()
                 elif opc== 5:
+                    os.system("clear")
                     menu.menuCatego_admin()
                     opc=pedirSubMcategoria_opcion.pedirSubMcategoria_opcion()
                     if opc == 1:
@@ -113,6 +127,7 @@ while True:
                 print("GRACIAS POR USAR EL SISTEMA")
             break
             
-    except ValueError:
-        print("Opcion no válida")
-        os.system("clear")
+    except ValueError as e:
+        capturarException(e)
+    except Exception as e:
+        capturarException(e)    

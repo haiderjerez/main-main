@@ -1,23 +1,13 @@
 [
     {
         "primer_nombre": "haider ",
-        "segundo_nombre": "steban",
+        "segundo_nombre": "steban ",
         "primer_apellido": "jerez",
         "segundo_apellido": "vergel",
         "direccion": "mi casa",
         "tipo_documento": "cc",
         "documento": "1097783291",
         "telefono": "3158557903",
-        "categoria": "nuevo"
-    },
-    {
-        "primer_nombre": "juan",
-        "segundo_nombre": "luiz",
-        "primer_apellido": "perez",
-        "segundo_apellido": "escobar",
-        "direccion": "poste",
-        "tipo_documento": "cc",
-        "documento": "123",
-        "telefono": "321"
-    }
+        "categoria": "leal"
+    } 
 ]

@@ -47,18 +47,20 @@ def menuVent_admin():
     print("""
 ------------------------------
 [1]-VER VENTAS
-[2]-VER PRODUCTOS
-[3]-AÑADIR PRODUCTOS
-[4]-ELIMINAR PRODUCTOS
-[5]-VOLVER 
+[2]-CREAR VENTA
+[3]-VER PRODUCTOS
+[4]-AÑADIR PRODUCTOS
+[5]-ELIMINAR PRODUCTOS
+[6]-VOLVER 
 """)       
     
 def menuReport_admin():
     print("""
 -------------------------------
 [1]-VER REPORTES
-[2]-ELIMINAR REPORTES
-[3]-VOLVER
+[2]-CREAR REPORTE
+[3]-ELIMINAR REPORTES
+[4]-VOLVER
 """)
 
 def menuCatego_admin():
@@ -85,28 +87,17 @@ def menu_usuario():
 
 def pedir_opcion():
     opc = 0
-    try:
-        opc = int(input("INGRESE LA OPCCION DESEADA: "))
-        print("--------------------------")
-        return opc
-    except Exception:
-        print("""
-OPCION NO VALIDA
-""")
-        return -1
+    opc = int(input("INGRESE LA OPCCION DESEADA: "))
+    print("--------------------------")
+    return opc
     
 #opcion para mostrar sub menu 
 def pedirSubM_opcion():
     opc = 0
-    try:
-        opc = int(input("INGRESE LA OPCCION DESEADA: "))
-        print("--------------------------")
-        return opc
-    except Exception:
-        print("""
-OPCION NO VALIDA
-""")
-        return -1
+    opc = int(input("INGRESE LA OPCCION DESEADA: "))
+    print("--------------------------")
+    return opc
+
     
 
 

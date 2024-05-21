@@ -1,3 +1,9 @@
 [
-
+    {
+        "numero_de_venta": "001",
+        "direccion": "casa",
+        "documento": "123",
+        "telefono": "321",
+        "categoria": "fibra"
+    }
 ]

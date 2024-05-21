@@ -5,7 +5,12 @@ import os
 def mostrarLIST_reportes():
     with open("reportes.json","r") as json_file:
         data = json.load(json_file)
-    return data
+    for user in data:
+        print("-----------------------------------------------------------------")
+        print("nombre",":", user["nombre"])
+        print("fecha",":", user["fecha"])
+        print("descripcion",":", user["descripcion"])
+        print("codigo",":", user["codigo"])
 
 #guardar los reportes
 def guardarReporte(reporte):
@@ -14,7 +19,7 @@ def guardarReporte(reporte):
 
 #crear reporte
 def crearReporte():
-    os.system("cls")
+    os.system("clear")
     with open("reportes.json","r") as json_file:
         data = json.load(json_file)
 
@@ -31,7 +36,7 @@ def crearReporte():
 
 #eliminar reportes
 def eliminarReporte():
-    os.system("cls")
+    os.system("clear")
     with open("reportes.json","r") as json_file:
         data = json.load(json_file)
 

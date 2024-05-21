@@ -5,7 +5,13 @@ import os
 def mostrarLIST_planes():
     with open("planes.json","r") as json_file:
         data = json.load(json_file)
-    return data
+    for user in data:
+        print("-----------------------------------------------------------------")
+        print("nombre",":", user["nombre"])
+        print("precio",":", user["precio"])
+        print("descripcion",":", user["descripcion"])
+        print("duracion",":", user["duracion"])
+        print("codigo",":", user["codigo"])
 
 #guardar los planes
 def guardarPlanes(planes):

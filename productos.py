@@ -4,7 +4,15 @@ import os
 def mostrarLIST_productos():
     with open("productos.json","r") as json_file:
         data = json.load(json_file)
-    return data
+    for user in data:
+        print("-----------------------------------------------------------------")
+        print("nombre",":", user["nombre"])
+        print("precio",":", user["precio"])
+        print("cantidad",":", user["cantidad"])
+        print("descripcion",":", user["descripcion"])
+        print("codigo",":", user["codigo"])
+        print("categoria",":", user["categoria"])
+        print("----------------------------------------------------------------")
 
 #guardar productos 
 def guardarProductos(productos):

@@ -1,3 +1,9 @@
 [
-    
+    {
+        "nombre": "mensual",
+        "precio": "$23",
+        "descripcion": "tienes 10 megas de internet y minutos ilimitados a todo destido ",
+        "duracion": "1 mes",
+        "codigo": "001"
+    }
 ]

@@ -6,8 +6,17 @@ from tarfile import data_filter
 #mostrar lista de usuarios
 def mostrarLIST_usuario():
     with open("usuario.json","r") as json_file:
-        data = json.load(json_file)
-    return data
+        data = json.load(json_file) 
+        for user in data:
+            print("-----------------------------------------------------------------")
+            print("nombre",":", user["primer_nombre"])
+            print("apellido",":", user["primer_apellido"])
+            print("direccion",":", user["direccion"])
+            print("tipo_documento",":", user["tipo_documento"])
+            print("documento",":", user["documento"])
+            print("telefono",":", user["telefono"])
+            print("categoria",":", user["categoria"])
+            print("----------------------------------------------------------------")
 
 
 #guardar los usuarios 
